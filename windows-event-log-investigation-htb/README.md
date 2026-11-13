@@ -11,12 +11,24 @@ Forela-Security has provided a technical assessment for a DFIR consultant role. 
 
 This htb project documents my investigation process, including how I locate relevant events, interpret their fields, and distinguish confirmed observations based in my hypothesis.
 
+## Investigation Objectives
+
+- Identify the evidence relevant to the htb questions.
+- Examine recorded user activity and system configuration changes.
+- Analyse relevant Security, System, PowerShell, Windows Defender,
+  and Windows Firewall events.
+- Correlate related events where shared identifiers and context
+  support the relationship.
+- Build a timeline of relevant observations.
+
 ## Ticket Jira
 
 The ticket is reviewed in Jira, ownership is taken, and the investigation begins. The directory containing the log files is downloaded and ingested into Splunk for analysis.
 
 ![Jira Ticket](screenshots/01_ticket_jira.png)
 
-![Logs insert in Splunk](screenshots(00_logs_inSPlunk.png)
+![Logs insert in Splunk](screenshots/00_logs_inSPlunk.png)
+
+
 
 
