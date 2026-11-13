@@ -43,5 +43,15 @@ In my case, the event code I'm interested in has the name `Event.System.EventID`
 
 ![First success login](screenshots/03_login_4624.png)
 
+## Bypass defenses and persistence
 
+At this point I need to understand how it bypassed the defense system, so manually I'll look for event codes in the Windows Firewall logs. For example, event code `2004` means a rule was added to the firewall. I got `490` such events, but I can't say that the user `cyberjunkie` did it. However, filtering by `userId` I got `29` added events from this user, so I can confirm that `cyberjunkie` is responsible for making these changes to the firewall rules.
+
+![Firewall added by cyberjunkie](screenshots/04_firewall_added.png)
+
+So looking in the logs, the rule name that had been added was `Metasploit C2 Bypass` on `2023-03-27 14:44:43`, and the direction is `2`, which means `Outbound`.
+
+So with this information I'll update the Jira ticket with the new information, to share it with my "team".
+
+![Jira update news](screenshots/05_jira_update.png)
 
