@@ -114,6 +114,8 @@ Inside this I found the following data:
     </Exec>
   </Actions>
 </Task>
+
+```
 As you can see, the full path that had been created for the task is C:\Users\CyberJunkie\Desktop\Automation-HTB.ps1, at 2023-03-27 14:51:21, by cyberjunkie. It is a PowerShell script. By looking at the Windows Defender codes to find any malware, I found 139 events with the event code 1116 | MALWAREPROTECTION_STATE_MALWARE_DETECTED. The name of the virus that was detected is called SharpHound, at 2023-03-27T14:42:34.
 
 Searching more deeply, I found that the path of the malware was C:\Users\CyberJunkie\Downloads\SharpHound-v1.1.0.zip.
