@@ -18,3 +18,5 @@ The ticket is reviewed in Jira, ownership is taken, and the investigation begins
 ![Jira Ticket](screenshots/01_ticket_jira.png)
 
 ![Logs insert in Splunk](screenshots(00_logs_inSPlunk.png)
+
+
