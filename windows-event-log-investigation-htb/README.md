@@ -29,6 +29,19 @@ The ticket is reviewed in Jira, ownership is taken, and the investigation begins
 
 ![Logs insert in Splunk](screenshots/00_logs_inSPlunk.png)
 
+## Validate logs in Splunk
+
+I ingest these `.evtx` log files into Splunk in JSON format. At this point I change the time to UTC time.
+As I know, the suspicious user is `cyberjunkie` and I'm dealing with Windows event logs.
+So I'll start looking for event ID `4624`, which means a successful logon attempt.
+
+Important note: Windows event IDs are not unique, and since I'm working with multiple log sources, I'll be interested in Security logs for this purpose.
+
+![Security Logs](screenshots/02_security_logs.png)
+
+In my case, the event code I'm interested in has the name `Event.System.EventID`. So I got 67 events with code 4624, but if I filter by `cyberjunkie` I receive 4 events, and most importantly, I got this first successful logon attempt from `cyberjunkie` at `27/03/2023 14:37:09`.
+
+![First success login](screenshots/03_login_4624.png)
 
 
 
